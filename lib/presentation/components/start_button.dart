@@ -48,7 +48,10 @@ class _StartButtonState extends State<StartButton> {
           colorFilter: exposure(1.2),
           child: Text(
             widget.text,
-            style: UIText.largeTextBold.copyWith(color: UIColor.gold),
+            style: UIText.largeTextBold.copyWith(
+              color: UIColor.gold,
+              letterSpacing: 1.5,
+            ),
           ),
         ),
       ),
