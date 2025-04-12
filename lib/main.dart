@@ -1,4 +1,4 @@
-import 'package:book_of_fate/presentation/screens/splash_screen.dart';
+import 'package:book_of_fate/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: const SplashScreen(),
+      title: 'Book of Fate',
+      routes: routes,
     );
   }
 }
