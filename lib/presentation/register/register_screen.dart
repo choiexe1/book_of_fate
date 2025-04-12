@@ -1,6 +1,6 @@
 import 'package:book_of_fate/presentation/components/base_button.dart';
 import 'package:book_of_fate/presentation/components/custom_scaffold.dart';
-import 'package:book_of_fate/presentation/components/form/input_text_field.dart';
+import 'package:book_of_fate/presentation/components/input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
