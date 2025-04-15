@@ -1,4 +1,4 @@
-import 'package:book_of_fate/routes.dart';
+import 'package:book_of_fate/core/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Book of Fate',
-      routes: routes,
+      routerConfig: router,
     );
   }
 }
