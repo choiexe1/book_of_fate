@@ -1,13 +1,13 @@
+import 'package:book_of_fate/core/routes.dart';
 import 'package:book_of_fate/presentation/components/start_button.dart';
 import 'package:book_of_fate/presentation/components/custom_scaffold.dart';
 import 'package:book_of_fate/ui/ui_color.dart';
 import 'package:book_of_fate/ui/ui_text.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
-  final VoidCallback? onPressed;
-
-  const SplashScreen({super.key, this.onPressed});
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -105,9 +105,7 @@ class _SplashScreenState extends State<SplashScreen>
                           Center(
                             child: StartButton(
                               text: '시작하기',
-                              onPressed: () {
-                                widget.onPressed?.call();
-                              },
+                              onPressed: () => context.go(Routes.register),
                               width: MediaQuery.of(context).size.width * 0.8,
                             ),
                           ),
