@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Book of Fate',
-      routerConfig: router,
+      routerConfig: appRouter,
     );
   }
 }
