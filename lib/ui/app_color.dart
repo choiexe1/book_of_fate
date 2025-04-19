@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class UIColor {
+abstract class AppColor {
   static const Color darkBlue = Color(0xFF0D1B2A);
   static const Color deepNavy = Color(0xFF1A1C2C);
   static const Color gold = Color(0xFFD4AF37);

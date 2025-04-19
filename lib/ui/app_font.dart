@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class UIText {
+abstract class AppFont {
   static const String font = 'Poppins';
 
   static const TextStyle titleTextBold = TextStyle(
