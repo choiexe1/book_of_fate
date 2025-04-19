@@ -1,4 +1,5 @@
 import 'package:book_of_fate/core/routes.dart';
+import 'package:book_of_fate/presentation/components/background_container.dart';
 import 'package:book_of_fate/ui/app_color.dart';
 import 'package:book_of_fate/ui/app_font.dart';
 import 'package:flutter/material.dart';
@@ -22,15 +23,8 @@ class _SplashScreenState extends State<SplashScreen> {
     });
 
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: const AssetImage('assets/images/splash.png'),
-            colorFilter: buildColorFilter(1.7),
-            fit: BoxFit.cover,
-          ),
-        ),
-        alignment: Alignment.center,
+      body: BackgroundContainer(
+        backgroundImage: 'assets/images/splash.png',
         child: Column(
           children: [
             const SizedBox(height: 150),
@@ -51,30 +45,5 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
     );
-  }
-
-  ColorFilter buildColorFilter(double exposure) {
-    return ColorFilter.matrix([
-      exposure,
-      0,
-      0,
-      0,
-      0,
-      0,
-      exposure,
-      0,
-      0,
-      0,
-      0,
-      0,
-      exposure,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-    ]);
   }
 }
