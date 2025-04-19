@@ -21,7 +21,7 @@ class InputField extends StatelessWidget {
       controller: controller,
       inputFormatters: inputFormatter ?? [],
       textAlign: TextAlign.center,
-      style: AppFont.normalTextRegular.copyWith(color: AppColor.white),
+      style: AppFont.regular.copyWith(color: AppColor.white),
       decoration: InputDecoration(
         filled: true,
         fillColor: AppColor.deepNavy.withAlpha(200),
@@ -34,7 +34,7 @@ class InputField extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.0),
         ),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
-        hintStyle: AppFont.normalTextRegular.copyWith(
+        hintStyle: AppFont.regular.copyWith(
           color: AppColor.white.withAlpha(170),
         ),
         hintText: hintText,

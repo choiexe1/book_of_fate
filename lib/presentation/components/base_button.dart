@@ -45,9 +45,7 @@ class _BaseButtonState extends State<BaseButton>
             color: AppColor.softGold,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Center(
-            child: Text(widget.text, style: AppFont.mediumTextBold),
-          ),
+          child: Center(child: Text(widget.text, style: AppFont.regular)),
         ),
       ),
     );
