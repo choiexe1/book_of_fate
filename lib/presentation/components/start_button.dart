@@ -1,5 +1,5 @@
-import 'package:book_of_fate/ui/ui_color.dart';
-import 'package:book_of_fate/ui/ui_text.dart';
+import 'package:book_of_fate/ui/app_color.dart';
+import 'package:book_of_fate/ui/app_font.dart';
 import 'package:flutter/material.dart';
 
 class StartButton extends StatefulWidget {
@@ -41,15 +41,15 @@ class _StartButtonState extends State<StartButton> {
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
         decoration: BoxDecoration(
-          color: UIColor.darkBlue,
+          color: AppColor.darkBlue,
           borderRadius: BorderRadius.circular(12),
         ),
         child: ColorFiltered(
           colorFilter: exposure(1.2),
           child: Text(
             widget.text,
-            style: UIText.largeTextBold.copyWith(
-              color: UIColor.gold,
+            style: AppFont.largeTextBold.copyWith(
+              color: AppColor.gold,
               letterSpacing: 1.5,
             ),
           ),

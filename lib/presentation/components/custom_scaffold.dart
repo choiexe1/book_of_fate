@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class CustomScaffold extends StatelessWidget {
+class BackgroundScaffold extends StatelessWidget {
   final Widget body;
 
   final String? backgroundImage;
   final PreferredSizeWidget? appBar;
   final BoxFit backgroundFit;
-  final ColorFilter? colorFilter;
+  final double? exposure;
   static const String defaultBackgroundPath = 'assets/images/bg.png';
 
-  const CustomScaffold({
+  const BackgroundScaffold({
     super.key,
     required this.body,
     this.backgroundImage,
     this.appBar,
     this.backgroundFit = BoxFit.cover,
-    this.colorFilter,
+    this.exposure,
   });
 
   @override
@@ -27,9 +27,9 @@ class CustomScaffold extends StatelessWidget {
         children: [
           Positioned.fill(
             child:
-                colorFilter != null
+                exposure != null
                     ? ColorFiltered(
-                      colorFilter: colorFilter!,
+                      colorFilter: buildColorFilter(exposure!),
                       child: Image.asset(
                         backgroundImage ?? defaultBackgroundPath,
                         fit: backgroundFit,
@@ -47,5 +47,30 @@ class CustomScaffold extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  ColorFilter buildColorFilter(double exposure) {
+    return ColorFilter.matrix([
+      exposure,
+      0,
+      0,
+      0,
+      0,
+      0,
+      exposure,
+      0,
+      0,
+      0,
+      0,
+      0,
+      exposure,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+    ]);
   }
 }

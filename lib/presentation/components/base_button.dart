@@ -1,5 +1,5 @@
-import 'package:book_of_fate/ui/ui_color.dart';
-import 'package:book_of_fate/ui/ui_text.dart';
+import 'package:book_of_fate/ui/app_color.dart';
+import 'package:book_of_fate/ui/app_font.dart';
 import 'package:flutter/material.dart';
 
 class BaseButton extends StatefulWidget {
@@ -42,10 +42,12 @@ class _BaseButtonState extends State<BaseButton>
           width: double.infinity,
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           decoration: BoxDecoration(
-            color: UIColor.softGold,
+            color: AppColor.softGold,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Center(child: Text(widget.text, style: UIText.mediumTextBold)),
+          child: Center(
+            child: Text(widget.text, style: AppFont.mediumTextBold),
+          ),
         ),
       ),
     );
