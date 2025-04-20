@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 abstract class AppColor {
   static const Color darkBlue = Color(0xFF0D1B2A);
   static const Color deepNavy = Color(0xFF1A1C2C);
+  static const Color lightNavy = Color(0xFF3A4B85);
   static const Color gold = Color(0xFFD4AF37);
   static const Color softGold = Color(0xFFE5C07B);
   static const Color blue = Color(0xFF3E6C9E);
