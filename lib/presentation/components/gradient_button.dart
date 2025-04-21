@@ -26,7 +26,10 @@ class GradientButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: AppFont.semiBold.copyWith(color: AppColor.gold),
+            style: AppFont.semiBold.copyWith(
+              color: AppColor.gold,
+              fontSize: 16,
+            ),
           ),
         ),
       ),

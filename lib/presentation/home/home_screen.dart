@@ -1,8 +1,10 @@
+import 'package:book_of_fate/core/routes.dart';
 import 'package:book_of_fate/presentation/components/background_container.dart';
-import 'package:book_of_fate/presentation/components/start_button.dart';
+import 'package:book_of_fate/presentation/components/gradient_button.dart';
 import 'package:book_of_fate/ui/app_color.dart';
 import 'package:book_of_fate/ui/app_font.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,13 +26,19 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 48),
-              Column(
-                spacing: 16,
-                children: [
-                  StartButton(onPressed: () {}, text: '질문하기'),
-                  StartButton(onPressed: () {}, text: '통계'),
-                  StartButton(onPressed: () {}, text: '질문하기'),
-                ],
+              SizedBox(
+                width: 200,
+                child: Column(
+                  spacing: 16,
+                  children: [
+                    GradientButton(
+                      onTap: () {
+                        context.push(Routes.ask);
+                      },
+                      text: '질문하기',
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
