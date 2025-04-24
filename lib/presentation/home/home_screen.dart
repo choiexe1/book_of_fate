@@ -1,13 +1,14 @@
-import 'package:book_of_fate/core/routes.dart';
 import 'package:book_of_fate/presentation/components/background_container.dart';
 import 'package:book_of_fate/presentation/components/gradient_button.dart';
+import 'package:book_of_fate/presentation/home/home_action.dart';
 import 'package:book_of_fate/ui/app_color.dart';
 import 'package:book_of_fate/ui/app_font.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final Function(HomeAction action) onAction;
+
+  const HomeScreen({super.key, required this.onAction});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     GradientButton(
                       onTap: () {
-                        context.push(Routes.ask);
+                        onAction(HomeAction.navigateToAsk());
                       },
                       text: '질문하기',
                     ),
