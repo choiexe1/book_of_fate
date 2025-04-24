@@ -20,9 +20,9 @@ class _AskScreenState extends State<AskScreen> with TickerProviderStateMixin {
   late final AnimationController _buttonFadeController;
 
   final List<String> _stepsText = [
-    '눈을 감고 천천히 질문을 떠올려보세요.',
     '구체적인 질문을 하면\n 더 정확한 답변을 얻을 수 있어요.',
-    '이제, 답변을 확인해보세요.',
+    '질문을 천천히 떠올려보세요.',
+    '충분히 준비가 된 이후에 답변을 확인해보세요.',
   ];
 
   @override
