@@ -1,12 +1,13 @@
-import 'package:book_of_fate/core/routes.dart';
 import 'package:book_of_fate/presentation/components/background_container.dart';
+import 'package:book_of_fate/presentation/splash/splash_action.dart';
 import 'package:book_of_fate/ui/app_color.dart';
 import 'package:book_of_fate/ui/app_font.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  final Function(SplashAction action) onAction;
+
+  const SplashScreen({super.key, required this.onAction});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -16,9 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(Duration(seconds: 1), () {
-        // ignore: use_build_context_synchronously
-        context.go(Routes.home);
+      Future.delayed(Duration(milliseconds: 1500), () {
+        widget.onAction(SplashAction.navigateToHome());
       });
     });
 
