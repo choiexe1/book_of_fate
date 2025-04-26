@@ -5,5 +5,4 @@ part 'answer_action.freezed.dart';
 @freezed
 sealed class AnswerAction with _$AnswerAction {
   const factory AnswerAction.navigateToHome() = NavigateToHome;
-  const factory AnswerAction.getRandomAnswer() = GetRandomAnswer;
 }

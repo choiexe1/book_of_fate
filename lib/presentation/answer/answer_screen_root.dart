@@ -33,9 +33,6 @@ class _AnswerScreenRootState extends State<AnswerScreenRoot> {
               case NavigateToHome():
                 context.go(Routes.home);
                 break;
-              case GetRandomAnswer():
-                widget.viewModel.onAction(action);
-                break;
             }
           },
         );

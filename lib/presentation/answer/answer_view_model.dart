@@ -18,9 +18,6 @@ class AnswerScreenViewModel with ChangeNotifier {
   void onAction(AnswerAction action) {
     switch (action) {
       case NavigateToHome():
-        throw UnimplementedError();
-      case GetRandomAnswer():
-        throw UnimplementedError();
     }
   }
 
