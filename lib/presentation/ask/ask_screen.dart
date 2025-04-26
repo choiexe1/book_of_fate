@@ -1,3 +1,4 @@
+import 'package:book_of_fate/presentation/ask/ask_action.dart';
 import 'package:book_of_fate/presentation/components/background_container.dart';
 import 'package:book_of_fate/presentation/components/gradient_button.dart';
 import 'package:book_of_fate/ui/app_color.dart';
@@ -6,7 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class AskScreen extends StatefulWidget {
-  const AskScreen({super.key});
+  final Function(AskAction action) onAction;
+
+  const AskScreen({super.key, required this.onAction});
+
   @override
   State<AskScreen> createState() => _AskScreenState();
 }
@@ -77,7 +81,10 @@ class _AskScreenState extends State<AskScreen> {
                 child: SizedBox(
                   width: 200,
                   height: 60,
-                  child: GradientButton(text: '답변보기', onTap: () {}),
+                  child: GradientButton(
+                    text: '답변보기',
+                    onTap: widget.onAction(AskAction.navigateToAnswer()),
+                  ),
                 ),
               ),
               const Spacer(),
