@@ -83,7 +83,11 @@ class _AskScreenState extends State<AskScreen> {
                   height: 60,
                   child: GradientButton(
                     text: '답변보기',
-                    onTap: () => widget.onAction(AskAction.navigateToAnswer()),
+                    onTap:
+                        _showButton
+                            ? () =>
+                                widget.onAction(AskAction.navigateToAnswer())
+                            : () {},
                   ),
                 ),
               ),
