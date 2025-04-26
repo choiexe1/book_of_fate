@@ -5,15 +5,15 @@ import 'package:book_of_fate/domain/model/answer.dart';
 import 'package:flutter/services.dart';
 
 class LocalAnswerDataSource implements AnswerDataSource {
-  final String _filePath = 'assets/answers.json';
+  final String _filePath = 'assets/data/answers.json';
 
   @override
   Future<List<Answer>> load() async {
     final String json = await rootBundle.loadString(_filePath);
-    final dynamic decoded = jsonDecode(json);
+    final List<dynamic> decoded = jsonDecode(json);
 
     return decoded
-        .whereType<Map<String, dynamic>>()
+        .cast<Map<String, dynamic>>()
         .map((json) => Answer.fromJson(json))
         .toList();
   }
