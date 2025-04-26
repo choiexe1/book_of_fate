@@ -1,7 +1,9 @@
+import 'package:book_of_fate/core/di.dart';
 import 'package:book_of_fate/core/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  diSetUp();
   runApp(const MyApp());
 }
 

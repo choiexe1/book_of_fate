@@ -1,4 +1,6 @@
+import 'package:book_of_fate/core/di.dart';
 import 'package:book_of_fate/core/routes.dart';
+import 'package:book_of_fate/presentation/answer/answer_screen_root.dart';
 import 'package:book_of_fate/presentation/ask/ask_screen_root.dart';
 import 'package:book_of_fate/presentation/home/home_screen_root.dart';
 import 'package:book_of_fate/presentation/splash/splash_screen_root.dart';
@@ -18,6 +20,10 @@ final appRouter = GoRouter(
     GoRoute(
       path: Routes.ask,
       builder: (context, state) => const AskScreenRoot(),
+    ),
+    GoRoute(
+      path: Routes.answer,
+      builder: (context, state) => AnswerScreenRoot(viewModel: getIt()),
     ),
   ],
 );
