@@ -20,9 +20,9 @@ class _AskScreenState extends State<AskScreen> {
   bool _showButton = false;
 
   final List<String> guides = [
-    '구체적인 질문을 하면\n 더 정확한 답변을 얻을 수 있어요.',
-    '질문을 천천히 떠올려보세요.',
-    '충분히 준비가 됐다면, 답변을 확인해보세요.',
+    '구체적인 질문을 하면\n 더 정확한 답변을 얻을 수 있어요',
+    '마음 속에 질문을 천천히 떠올려보세요',
+    '충분히 준비가 됐다면, 답변을 확인해보세요',
   ];
 
   @override
@@ -43,7 +43,7 @@ class _AskScreenState extends State<AskScreen> {
               TweenAnimationBuilder<double>(
                 key: ValueKey('$guideStep'),
                 tween: Tween(begin: 0.0, end: 1.0),
-                duration: const Duration(seconds: 5),
+                duration: const Duration(seconds: 4),
                 curve: Curves.easeInOut,
                 builder: (context, value, child) {
                   double opacity;
