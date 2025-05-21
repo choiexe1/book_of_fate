@@ -1,4 +1,4 @@
-package com.example.book_of_fate
+package com.book.of.fate
 
 import io.flutter.embedding.android.FlutterActivity
 
